@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
 
-  private configUrl = 'http://localhost:5000/';
+  private configUrl = 'https://studentform-backend-8.onrender.com/';
   constructor(private http: HttpClient) { }
 
   postData(functionName: any, data: any) {
