@@ -76,8 +76,8 @@
         <td>{{ student.course }}</td>
          <td>{{ student.gender }}</td>
         <td>
-          <button (click)="onEdit(student.id)" mat-raised-button color="primary" class="btn edit-btn">Edit</button>
-          <button (click)="onDelete(student.id)" mat-raised-button color="warn" class="btn delete-btn">Delete</button>
+          <button (click)="onEdit(student._id)" mat-raised-button color="primary" class="btn edit-btn">Edit</button>
+          <button (click)="onDelete(student._id)" mat-raised-button color="warn" class="btn delete-btn">Delete</button>
         </td>
       </tr>
   
