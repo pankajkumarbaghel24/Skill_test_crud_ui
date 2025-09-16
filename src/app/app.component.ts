@@ -43,7 +43,7 @@ onUpdateHidden=true;
 
 
   getTable(){
-    this.apiService.getData('student/mongo').subscribe(response=>{
+    this.apiService.getData('student').subscribe(response=>{
       console.log('table',response);
       this.tablesData=response
     })
@@ -64,7 +64,7 @@ onUpdateHidden=true;
             });
     return;
   }
-    this.apiService.postData('student/mongo', this.studentForm.value).subscribe((res: any) => {
+    this.apiService.postData('student', this.studentForm.value).subscribe((res: any) => {
       this.data = res;
       if (this.data)
         alert("Data saved succesfully..")
@@ -107,7 +107,7 @@ onUpdate() {
 
 
   // Send PUT request to update trainee
-  this.apiService.putData('student/mongo/' + this.id, this.studentForm.value).subscribe((res: any) => {
+  this.apiService.putData('student/' + this.id, this.studentForm.value).subscribe((res: any) => {
     this.data = res;
     if (this.data) {
       alert("Data updated successfully!");
@@ -132,7 +132,7 @@ async onDelete(id:any){
   });
   if (!confirmed.isConfirmed) return;
     
-      this.apiService.deleteData('student/mongo/' + id).subscribe({
+      this.apiService.deleteData('student/' + id).subscribe({
         next: (res) => {
           console.log('Delete response:', res);
          // alert("Data deleted successfully.");
