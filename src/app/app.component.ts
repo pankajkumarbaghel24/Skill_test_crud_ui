@@ -82,7 +82,7 @@ onClear(){
 onEdit(id: any) { 
     this.hideButton();
   // Find the selected trainee data
-  this.selectedTrainee = this.tablesData.find((t: any) => t.id === parseInt(id)); 
+  this.selectedTrainee = this.tablesData.find((t: any) => t._id === parseInt(id)); 
   this.getTable();
   console.log("Editing Trainee:", this.selectedTrainee);
 
