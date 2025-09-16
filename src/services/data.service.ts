@@ -6,7 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
 
-  private configUrl = 'https://studentform-backend-8.onrender.com/';
+  // private configUrl = 'https://studentform-backend-8.onrender.com/';
+   private configUrl = 'https://skill-test-crud-back-1.onrender.com/';
   constructor(private http: HttpClient) { }
 
   postData(functionName: any, data: any) {
